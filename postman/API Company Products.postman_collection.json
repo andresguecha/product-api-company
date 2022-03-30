@@ -17,11 +17,16 @@
 								"key": "Content-Type",
 								"value": "application/json",
 								"type": "text"
+							},
+							{
+								"key": "x-access-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNDM4OWFmNTMwNzdhYjk5Njg1OTNmYiIsImlhdCI6MTY0ODU5NDIwMSwiZXhwIjoxNjQ4NjgwNjAxfQ.28Wy6YVq-A7k_MbW4kSJEDy_8zOBtflLwo3eWj-GhWM",
+								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"SmartPhone Samsung S22 Plus\",\r\n    \"category\":\"SmartPhone\",\r\n    \"price\":\"25000.99\",\r\n    \"imgUrl\":\"https://d500.epimg.net/cincodias/imagenes/2022/02/01/smartphones/1643695402_158654_1643695515_noticia_normal.jpg\"\r\n\r\n}"
+							"raw": "{\r\n    \"name\":\"SmartPhone Samsung S35 Plus\",\r\n    \"category\":\"SmartPhone\",\r\n    \"price\":\"25000.99\",\r\n    \"imgUrl\":\"https://d500.epimg.net/cincodias/imagenes/2022/02/01/smartphones/1643695402_158654_1643695515_noticia_normal.jpg\"\r\n\r\n}"
 						},
 						"url": {
 							"raw": "localhost:4000/api/products",
@@ -62,7 +67,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:4000/api/products/62242549750416feea95f8b8",
+							"raw": "localhost:4000/api/products/6240587d23727bdaa65683d9",
 							"host": [
 								"localhost"
 							],
@@ -70,7 +75,7 @@
 							"path": [
 								"api",
 								"products",
-								"62242549750416feea95f8b8"
+								"6240587d23727bdaa65683d9"
 							]
 						}
 					},
@@ -92,7 +97,7 @@
 							"raw": "{\r\n    \"name\":\"laptop lenovo T-400\"\r\n\r\n}"
 						},
 						"url": {
-							"raw": "localhost:4000/api/products/62241ae63ee15046625ef1d5",
+							"raw": "localhost:4000/api/products/6240587d23727bdaa65683d9",
 							"host": [
 								"localhost"
 							],
@@ -100,7 +105,7 @@
 							"path": [
 								"api",
 								"products",
-								"62241ae63ee15046625ef1d5"
+								"6240587d23727bdaa65683d9"
 							]
 						}
 					},
@@ -112,7 +117,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:4000/api/products/62241bf90d2d3de9e048cb0f",
+							"raw": "localhost:4000/api/products/6240587d23727bdaa65683d9",
 							"host": [
 								"localhost"
 							],
@@ -120,7 +125,7 @@
 							"path": [
 								"api",
 								"products",
-								"62241bf90d2d3de9e048cb0f"
+								"6240587d23727bdaa65683d9"
 							]
 						}
 					},
@@ -144,7 +149,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\":\"Andres Joel \",\r\n    \"email\":\"AndresJoel51@andres.com\",\r\n    \"password\":\"132456\"\r\n\r\n}"
+							"raw": "{\r\n    \"username\":\"Marcela\",\r\n    \"email\":\"Marcela01@andres.com\",\r\n    \"password\":\"32/(&%7\",\r\n    \"roles\":[\"admin\", \"moderator\"]\r\n}"
 						},
 						"url": {
 							"raw": "localhost:4000/api/auth/signup",
@@ -165,7 +170,17 @@
 					"name": "/api/auth/signin",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"Marcela01@andres.com\",\r\n    \"password\":\"32/(&%7\"\r\n}"
+						},
 						"url": {
 							"raw": "localhost:4000/api/auth/signin",
 							"host": [
